@@ -1,15 +1,15 @@
 # MongoDB Movie Database
 
-##1. Create a Database called `movies`
+## 1. Create a Database called `movies`
 ```javascript
 use movies
 
-##2. Create a Collection called moviedetails
+## 2. Create a Collection called moviedetails
 
 
 db.createCollection("moviedetails")
 
-##3. Insert 5 Movie Documents into the moviedetails Collection
+## 3. Insert 5 Movie Documents into the moviedetails Collection
 
 
 db.moviedetails.insertMany([
@@ -20,31 +20,31 @@ db.moviedetails.insertMany([
     { "title": "Vidamuyatchi", "genre": "Thriller", "director": "Magizh Thirumeni", "releaseYear": 2025 }
 ])
 
-##4. List All Documents Created
+## 4. List All Documents Created
 
 
 
 db.moviedetails.find().pretty()
 
-##5. List Movies Directed by Lokesh Kanakaraj
+## 5. List Movies Directed by Lokesh Kanakaraj
 
 
 
 db.moviedetails.find({ "director": "Lokesh Kanakaraj" }).pretty()
 
-##6. List Lokesh Kanakaraj’s Movies Released in 2023
+## 6. List Lokesh Kanakaraj’s Movies Released in 2023
 
 
 
 db.moviedetails.find({ "director": "Lokesh Kanakaraj", "releaseYear": 2023 }).pretty()
 
-##7. Delete the Movie You Don’t Like
+## 7. Delete the Movie You Don’t Like
 
 
 
 db.moviedetails.deleteOne({ "title": "Movie Title" })
 
-##8. Add Your Favorite Movie
+## 8. Add Your Favorite Movie
 
 
 
@@ -60,7 +60,7 @@ db.moviedetails.insertOne({
 
 db.moviedetails.find({ "director": "Magizh Thirumeni", "releaseYear": 2025 }).pretty()
 
-##10. List Out the Directors’ Names in Your Document
+## 10. List Out the Directors’ Names in Your Document
 
 
 db.moviedetails.distinct("director")
