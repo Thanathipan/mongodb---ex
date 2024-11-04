@@ -3,7 +3,7 @@
 ## 1. Create a Database called `movies`
 ```javascript
 use movies
-
+```
 ## 2. Create a Collection called moviedetails
 
 
